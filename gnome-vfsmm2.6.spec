@@ -1,15 +1,16 @@
-%define version 2.18.0
+%define version 2.20.0
 %define release %mkrel 1
 
 %define major	1
 %define api_version 2.6
 
 %define glibmm_version 2.4.0
-%define gnome-vfs_version 2.7.5
+%define gnome-vfs_version 2.8.1
 
 %define pkgname gnome-vfsmm
 %define libname		%mklibname %pkgname %api_version %{major}
 %define libname_orig	%mklibname %pkgname %api_version
+%define develname %mklibname -d %pkgname %api_version
 
 Name:	 	%{pkgname}%{api_version}
 Summary: 	A C++ interface for GNOME VFS library
@@ -45,7 +46,7 @@ directories and so on.  It is a subpackage of the gnomemm project,
 which provides a C++ interface for GNOME libraries.
 
 
-%package	-n %{libname}-devel
+%package	-n %develname
 Summary:	Headers and development files of GNOME VFS C++ wrapper
 Group:		Development/GNOME and GTK+
 Provides:	%{name}-devel = %{version}-%{release}
@@ -53,8 +54,9 @@ Provides:	%{libname_orig}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}
 Requires:	gnome-vfs2-devel >= %{gnome-vfs_version}
 Requires:	glibmm2.4-devel >= %{glibmm_version}
+Obsoletes: %mklibname -d %pkgname 2.6 1
 
-%description -n %{libname}-devel
+%description -n %develname
 This package contains the headers and various development files needed,
 when compiling or developing programs which want C++ wrapper of GNOME
 VFS library.
@@ -94,9 +96,9 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-, root, root)
 %doc COPYING
-%{_libdir}/*.so.*
+%{_libdir}/libgnomevfsmm-%{api_version}.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %develname
 %defattr(-, root, root)
 %doc AUTHORS COPYING ChangeLog NEWS README
 %{_includedir}/*

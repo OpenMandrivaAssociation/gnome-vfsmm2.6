@@ -20,7 +20,6 @@ License: 	LGPL
 Group:   	System/Libraries
 Source:  	http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
 URL:     	http://gtkmm.sourceforge.net/
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	gnome-vfs2-devel >= %{gnome-vfs_version}
 BuildRequires:	glibmm2.4-devel >= %{glibmm_version}
 BuildRequires:	doxygen

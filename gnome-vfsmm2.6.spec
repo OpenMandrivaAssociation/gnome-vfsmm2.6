@@ -1,11 +1,11 @@
 %define version 2.21.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define major	1
 %define api_version 2.6
 
 %define glibmm_version 2.4.0
-%define gnome-vfs_version 2.8.1
+%define gnome_vfs_version 2.8.1
 
 %define pkgname gnome-vfsmm
 %define libname		%mklibname %pkgname %api_version %{major}
@@ -21,7 +21,7 @@ Group:   	System/Libraries
 Source:  	http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
 URL:     	http://gtkmm.sourceforge.net/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	gnome-vfs2-devel >= %{gnome-vfs_version}
+BuildRequires:	gnome-vfs2-devel >= %{gnome_vfs_version}
 BuildRequires:	glibmm2.4-devel >= %{glibmm_version}
 BuildRequires:	doxygen
 
@@ -52,7 +52,7 @@ Group:		Development/GNOME and GTK+
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	%{libname_orig}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}
-Requires:	gnome-vfs2-devel >= %{gnome-vfs_version}
+Requires:	gnome-vfs2-devel >= %{gnome_vfs_version}
 Requires:	glibmm2.4-devel >= %{glibmm_version}
 Obsoletes: %mklibname -d %pkgname 2.6 1
 

@@ -1,5 +1,5 @@
-%define version 2.22.0
-%define release %mkrel 2
+%define version 2.24.0
+%define release %mkrel 1
 
 %define major	1
 %define api_version 2.6
@@ -16,7 +16,7 @@ Name:	 	%{pkgname}%{api_version}
 Summary: 	A C++ interface for GNOME VFS library
 Version: 	%version
 Release: 	%release
-License: 	LGPL
+License: 	LGPLv2+
 Group:   	System/Libraries
 Source:  	http://ftp.gnome.org/pub/GNOME/sources/%{pkgname}/%{pkgname}-%{version}.tar.bz2
 URL:     	http://gtkmm.sourceforge.net/

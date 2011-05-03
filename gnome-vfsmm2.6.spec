@@ -1,5 +1,5 @@
 %define version 2.26.0
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define major	1
 %define api_version 2.6

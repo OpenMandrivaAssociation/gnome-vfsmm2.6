@@ -9,7 +9,7 @@
 Name:		%{pkgname}%{api}
 Summary:	A C++ interface for GNOME VFS library
 Version:	2.26.0
-Release:	13
+Release:	14
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://gtkmm.sourceforge.net/

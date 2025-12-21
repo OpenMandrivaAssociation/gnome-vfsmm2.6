@@ -15,6 +15,11 @@ Group:		System/Libraries
 Url:		https://gtkmm.sourceforge.net/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-vfsmm/%{url_ver}/%{pkgname}-%{version}.tar.bz2
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig(glibmm-2.4)
 BuildRequires:	pkgconfig(gnome-vfs-2.0)
